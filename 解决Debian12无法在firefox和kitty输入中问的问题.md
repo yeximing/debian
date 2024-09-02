@@ -9,7 +9,8 @@
    XIM=fcitx5
 
    XIM_PROGRAM=fcitx5
-
+   # 下面三项后面不带5即fcitx
+   # 可以解决原生Linux微信无法输入中文的问题
    GTK_IM_MODULE=fcitx5
 
    QT_IM_MODULE=fcitx5
