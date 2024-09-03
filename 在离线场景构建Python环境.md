@@ -32,3 +32,15 @@ pip download <package_name> --only-binary=:all:
 ```shell
 pip download <package_name> --no-binary=:all:
 ```
+
+---
+
+有时本地安装了所需的依赖包，但是安装时依然提示缺少依赖包。
+这可能是因为：默认情况下，`pip`在构建和安装过程中会使用一个隔离的环境。构建隔离确保构建过程中的所有依赖项都是干净的、不受当前环境影响的。但是，这也可能导致找不到已经安装的依赖包。
+
+解决方法：
+增加`--no-build-isolation`选项，这样`pip`就不会使用隔离环境，而是使用当前环境。
+即：
+```shell
+pip install --no-build-isolationa .
+```
