@@ -6,22 +6,17 @@
 ```bash
 
    # 解决firefox无法输入中文的问题
-
    XIM=fcitx5
-
    XIM_PROGRAM=fcitx5
+
    # 下面三项后面不带5即fcitx
-   # 可以解决原生Linux微信无法输入中文的问题
+   # 解决原生Linux微信无法输入中文的问题
    GTK_IM_MODULE=fcitx5
-
    QT_IM_MODULE=fcitx5
-
    XMODIFIERS=@im=fcitx5
-
    SDL_IM_MODULE=fcitx5
 
    # 解决kitty无法输入中文的问题
-
    GLFW_IM_MODULE=ibus
 
 ```
@@ -32,6 +27,12 @@
 
 在`/etc/environment`里添加相关的环境变量：
 ```bash
+   # 解决原生Linux微信无法输入中文的问题
+   GTK_IM_MODULE=ibus
+   QT_IM_MODULE=ibus
+   XMODIFIERS=@im=ibus
+   ibus-daemon -d -x
+
    # 解决kitty无法输入中文的问题
    GLFW_IM_MODULE=ibus
 ```
