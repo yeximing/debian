@@ -8,8 +8,6 @@ wget https://mirrors.ustc.edu.cn/debian/pool/main/f/freetype/libfreetype6_2.12.1
 ```
 
 
-    1
-
 2、安装依赖
 ```bash
 dpkg -i libfreetype6_2.12.1+dfsg-5_amd64.deb
